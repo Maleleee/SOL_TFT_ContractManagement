@@ -1,24 +1,34 @@
 # Teamfight Tactics Little Legends Shop Smart Contract Management 
 
 
-This smart contract allows users to purchase "Little Legends" of different rarities in a Teamfight Tactics-themed shop. The contract allows for the buying of Common, Uncommon, and Rare Little Legends using Ethereum.
+This smart contract provides a decentralized platform for purchasing "Little Legends" of various rarities in a Teamfight Tactics-themed shop. Users can buy legends using Ethereum and manage their collection securely.
+
 
 # Description
-This project is a simple Ethereum smart contract that simulates a Legend Shop. The contract allows users to:
+This project simulates a "Little Legends Shop" on the Ethereum blockchain. It allows users to:
 
-* Buy a Common Legend: Costs 1 ETH.
-* Buy an Uncommon Legend: Costs 2 ETH.
-* Buy a Rare Legend: Costs 3 ETH.
-The contract also allows users to view their purchased Little Legends and tracks each purchase.
+* Purchase Little Legends of different rarities (Common, Uncommon, Rare, Epic, Legendary, and Mythic) using TFT Points, which can be purchased with Ethereum.
+* View their personal collection of Little Legends.
+* Track transactions and maintain a secure balance of TFT Points.
 
-# Functions
-1. buyCommonLegend(): Buys a Common Legend for 1 ETH.
-2. buyUncommonLegend(): Buys an Uncommon Legend for 2 ETH.
-3. buyRareLegend(): Buys a Rare Legend for 3 ETH.
-4. getPurchasedLegends(): Returns the list of Little Legends a user has purchased.
-The contract uses error handling mechanisms to ensure valid purchases and to prevent invalid interactions with the contract.
+Each legend rarity has its own cost in TFT Points, ensuring a dynamic and engaging purchasing system.
 
 
+
+## Functions
+
+# Legend Purchases
+
+* Common Legends: Cost 1 TFT Point.
+* Uncommon Legends: Cost 2 TFT Points.
+* Rare Legends: Cost 3 TFT Points.
+* Epic Legends: Cost 5 TFT Points.
+* Legendary Legends: Cost 10 TFT Points.
+* Mythic Legends: Cost 20 TFT Points.
+
+## Point Management
+
+* Buy TFT Points: Exchange Ethereum for TFT points at a rate of 1 ETH = 1 TFT Point
 
 # Getting Started
 1. Install Prerequisites
@@ -52,16 +62,17 @@ Make sure you have the following installed:
 7. Interact with the Contract
 After deploying the contract, you can interact with it using MetaMask and Ethers.js in a front-end application or directly through Hardhat.
 
-* Buy a Common Legend: Call the buyCommonLegend() function and send 1 ETH.
-* Buy an Uncommon Legend: Call the buyUncommonLegend() function and send 2 ETH.
-* Buy a Rare Legend: Call the buyRareLegend() function and send 3 ETH.
-* View Purchased Legends: Call the getPurchasedLegends() function to view the list of your purchased legends.
+* Buy TFT Points: Send ETH to purchase TFT Points.
+* Buy Legends: Call the corresponding function (e.g., buyCommonLegend()).
+* View Legends: Retrieve your collection with getMyLegends().
 
 
 # Testing and Debugging
-Revert Errors: If a purchase fails, check for errors such as "Insufficient funds for purchase."
-Require Failures: Ensure the correct amount of ETH is sent with each purchase (e.g., "Insufficient funds to buy this legend").
 
+Common Errors
+
+1. Insufficient TFT Points: Ensure your balance is adequate for the purchase.
+2. Incorrect Payment Amount: Verify the correct amount of ETH is sent when buying points
 
 # Authors 
 
